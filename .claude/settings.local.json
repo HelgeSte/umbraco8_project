@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command *)",
+      "PowerShell(Get-Service *)",
+      "PowerShell(sqlcmd *)",
+      "PowerShell(Head *)",
+      "PowerShell(Get-ChildItem -Path \"E:\\\\claude-ai\\\\umbraco8_project\\\\packages\\\\UmbracoCms.Core.8.18.15\\\\lib\" -Recurse -File | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"E:\\\\claude-ai\\\\umbraco8_project\\\\packages\\\\Umbraco.SqlServerCE.4.0.0.1\" -Recurse -File | ForEach-Object { $_.FullName })"
+    ]
+  }
+}
