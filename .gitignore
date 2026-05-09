@@ -1,0 +1,104 @@
+# ============================================================
+# .gitignore for Umbraco 7 / Umbraco 8 (.NET Framework)
+# Visual Studio project
+# ============================================================
+
+
+# -----------------------------------------------
+# Visual Studio
+# -----------------------------------------------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# -----------------------------------------------
+# Umbraco CMS (v7 / v8)
+# -----------------------------------------------
+
+# Umbraco auto-generated front-end files
+/umbraco/
+/umbraco_client/
+
+# Umbraco temp, cache and log files
+/App_Data/TEMP/
+/App_Data/Logs/
+/App_Data/NuGetBackup/
+
+# Umbraco models builder output (auto-generated)
+/App_Data/Models/
+
+# Umbraco examine indexes
+/App_Data/[Ii]ndex/
+
+# Umbraco internal config (auto-generated, not to be versioned)
+/Config/splashes/
+
+# SQL CE database file — ONLY ignore if using SQL Server
+# If you are using SQL CE (.sdf) as your database, comment these
+# two lines out so the database is included in the repository.
+/App_Data/*.sdf
+/App_Data/*.sdf-wal
+/App_Data/*.sdf-shm
+
+# Umbraco media uploads — usually too large for Git.
+# Use a shared network path or blob storage instead.
+# Comment out if you want media in the repo (small sites only).
+/media/
+
+# -----------------------------------------------
+# Keep these files — do NOT ignore
+# -----------------------------------------------
+
+# packages.config MUST be committed — it's how NuGet restores
+# all DLLs on other machines after a clone.
+!packages.config
+
+# web.config should be committed (remove connection string if sensitive)
+!web.config
+
+# App_Data/access.config must be present for public access migration
+!App_Data/access.config
+
+# -----------------------------------------------
+# Windows
+# -----------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# -----------------------------------------------
+# macOS (if anyone on the team uses a Mac)
+# -----------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
