@@ -189,10 +189,14 @@ Review /umbraco/Logs/ for any warnings or errors after startup.
 
 ### 6.1 — Initialise Git for the new project
 ```
-cd UmbracoV9
+cd E:\claude-ai\UmbracoV9
 git init
+git checkout -b main
+copy E:\claude-ai\umbraco-v9-plus.gitignore .gitignore
 git add .
 git commit -m "Umbraco 9.5.4 — migrated from v8 with starter kit"
+git remote add origin git@github.com:HelgeSte/umbraco9_project.git
+git push -u origin main
 ```
 
 Use the umbraco-v9-plus.gitignore file as .gitignore before committing.
