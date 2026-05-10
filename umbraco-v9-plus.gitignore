@@ -1,0 +1,109 @@
+# ============================================================
+# .gitignore for Umbraco 9+ (.NET Core / ASP.NET Core)
+# Covers v9, v10, v11, v12, v13, v14, v15, v16, v17
+# ============================================================
+
+
+# -----------------------------------------------
+# .NET / dotnet CLI
+# -----------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# -----------------------------------------------
+# Visual Studio
+# -----------------------------------------------
+.vs/
+*.suo
+*.userosscache
+*.sln.docstates
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# -----------------------------------------------
+# Umbraco CMS (v9+)
+# -----------------------------------------------
+
+# Umbraco auto-generated and runtime files
+/umbraco/Data/TEMP/
+/umbraco/Logs/
+/umbraco/mediacache/
+
+# Umbraco models builder output (auto-generated on build)
+/umbraco/models/
+
+# Umbraco Lucene / Examine indexes
+/umbraco/[Ii]ndex/
+
+# Umbraco runtime cache
+/App_Data/
+
+# Published output (dotnet publish)
+/publish/
+/out/
+
+# Umbraco media uploads
+# Comment out for small sites where you want media in the repo
+/wwwroot/media/
+
+# -----------------------------------------------
+# ASP.NET Core
+# -----------------------------------------------
+# User secrets (never commit these)
+**/secrets.json
+**/appsettings.Development.json
+
+# Leave appsettings.json committed, but remove connection strings
+# and sensitive keys from it before committing.
+# Consider using environment variables or user secrets for local dev.
+
+# -----------------------------------------------
+# Keep these files — do NOT ignore
+# -----------------------------------------------
+
+# appsettings.json should be committed (sanitise sensitive values)
+!appsettings.json
+
+# -----------------------------------------------
+# Windows
+# -----------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# -----------------------------------------------
+# macOS
+# -----------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
